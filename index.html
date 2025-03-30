@@ -3,209 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GatusHub by GatusSecGG - Your premier destination for cybersecurity, software development, and penetration testing solutions.">
+    <meta name="keywords" content="cybersecurity, software development, web development, pentesting, GatusSecGG, GatusHub">
+    <meta name="author" content="Mark JP Tolentino">
     <title>GatusHub - Powered by GatusSecGG</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-twilight.min.css" id="prism-theme">
+    <link rel="icon" href="https://via.placeholder.com/32x32?text=GH" type="image/x-icon" id="favicon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js" defer></script>
 </head>
 <body>
-    <canvas id="matrix-bg"></canvas>
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>Loading GatusHub...</p>
+    </div>
 
-    <header>
-        <img src="./images/thumb/thumbnail_1.png" alt="GatusSecGG Logo" class="logo">
-        <h1>GatusHub - Powered by GatusSecGG</h1>
-        <p>Unlock the Secrets of Cybersecurity, Software, Web Development, and Pentesting</p>
+    <div class="overlay"></div>
+    <canvas id="matrix-bg"></canvas>
+    <div id="particles"></div>
+    <div class="custom-cursor"></div>
+
+    <header class="parallax-header glass-effect">
+        <div class="banner">Unleashing Cybersecurity Excellence</div>
+        <div class="header-content">
+            <img src="./images/thumb/thumbnail_1.png" alt="GatusSecGG Logo" class="logo" id="logo">
+            <h1>GatusHub <span>Powered by GatusSecGG</span></h1>
+            <p class="slogan" id="typing-slogan"></p>
+            <div class="clock-container">
+                <div class="clock" id="live-clock"></div>
+            </div>
+            <button id="mode-toggle" title="Toggle Dark/Light Mode">🌙</button>
+            <button id="music-toggle" title="Toggle Background Music">🎵</button>
+        </div>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#cybersecurity">Cybersecurity</a></li>
-            <li><a href="#software-dev">Software Development</a></li>
-            <li><a href="#web-dev">Web Development</a></li>
-            <li><a href="#pentesting">Pentesting</a></li>
-            <li><a href="#mss">Managed Security Services</a></li>
-            <li><a href="#videos">Videos</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-            <li><a href="#login">Login</a></li>
-            <li><a href="#signup">Signup</a></li>
-        </ul>
-        <span class="search-icon">🔍</span>
+        <div class="nav-container">
+            <button class="hamburger" id="hamburger">☰</button>
+            <ul id="nav-menu">
+                <li><a href="#home" data-tooltip="Welcome">Home</a></li>
+                <li><a href="#stats" data-tooltip="Achievements">Stats</a></li>
+                <li><a href="#gallery" data-tooltip="Visuals">Gallery</a></li>
+                <li><a href="#cybersecurity" data-tooltip="Security">Cybersecurity</a></li>
+                <li><a href="#software-dev" data-tooltip="Code">Software Dev</a></li>
+                <li><a href="#web-dev" data-tooltip="Web">Web Dev</a></li>
+                <li><a href="#pentesting" data-tooltip="Hack">Pentesting</a></li>
+                <li><a href="#mss" data-tooltip="Services">MSS</a></li>
+                <li><a href="#code-playground" data-tooltip="Code">Code Playground</a></li>
+                <li><a href="#videos" data-tooltip="Watch">Videos</a></li>
+                <li><a href="#contact" data-tooltip="Reach Out">Contact</a></li>
+                <li><a href="#login" data-tooltip="Sign In">Login</a></li>
+                <li><a href="#signup" data-tooltip="Join">Signup</a></li>
+            </ul>
+            <span class="search-icon" data-tooltip="Search">🔍</span>
+        </div>
     </nav>
 
-    <section id="home">
-        <h2>Welcome to GatusHub</h2>
-        <div class="content-box">
-            <h3>Your Cybersecurity and Development Hub</h3>
-            <p>GatusHub is your ultimate resource for mastering cybersecurity, software development, web development, and penetration testing. Whether you're a beginner or a seasoned professional, we provide tools, insights, and services to secure and innovate in the digital world.</p>
-            <p>Join my community to explore cutting-edge solutions and stay ahead of cyber threats.</p>
-            <button id="get-started">Get Started</button>
+    <section id="home" class="hero">
+        <div class="hero-content" data-tilt>
+            <h2>Welcome to GatusHub</h2>
+            <p>Your trusted partner in cybersecurity, software innovation, and digital transformation.</p>
+            <button id="get-started" class="cta-btn">Explore Now</button>
+        </div>
+    </section>
+
+    <section id="stats">
+        <h2>Our Impact</h2>
+        <div class="stats-grid">
+            <div class="stat-box" data-tilt>
+                <h3><span class="counter" data-target="6">0</span>B+</h3>
+                <p>Events Monitored Daily</p>
+            </div>
+            <div class="stat-box" data-tilt>
+                <h3><span class="counter" data-target="33">0</span>B+</h3>
+                <p>Threats Stopped Monthly</p>
+            </div>
+            <div class="stat-box" data-tilt>
+                <h3><span class="counter" data-target="70">0</span>+</h3>
+                <p>Countries Supported</p>
+            </div>
+            <div class="stat-box" data-tilt>
+                <h3><span class="counter" data-target="4">0</span>M+</h3>
+                <p>Business Users</p>
+            </div>
         </div>
     </section>
 
     <section id="gallery">
         <h2>Gallery</h2>
-        <div class="content-box gallery">
-            <p>Check out some visuals from the world of cybersecurity and development:</p>
-            <img src="./images/thumb/thumbnail_2.png" alt="Cybersecurity">
-            <img src="./images/thumb/thumbnail_3.png" alt="Code">
-            <img src="./images/thumb/thumbnail_4.png" alt="Web Design">
+        <div class="content-box gallery" data-tilt>
+            <p>Visual proof of our expertise:</p>
+            <div class="gallery-grid">
+                <img loading="lazy" src="./images/thumb/thumbnail_2.png" alt="Cybersecurity">
+                <img loading="lazy" src="./images/thumb/thumbnail_3.png" alt="Code">
+                <img loading="lazy" src="./images/thumb/thumbnail_4.png" alt="Web Design">
+                <img loading="lazy" src="./images/thumb/thumbnail_5.png" alt="Mark Jp Tolentino">
+            </div>
         </div>
     </section>
 
     <section id="cybersecurity">
-        <h2>Cybersecurity</h2>
-        <div class="content-box">
-            <p>Cybersecurity is the art of defending systems, networks, and data against malicious threats. In a world of evolving cyberattacks, understanding security principles is crucial for protecting sensitive information and infrastructure.</p>
+        <h2>Cybersecurity Solutions</h2>
+        <div class="content-box" data-tilt>
+            <h3>Fortify Your Defenses</h3>
+            <p>Comprehensive protection against modern threats with cutting-edge tools and strategies.</p>
             <ul>
-                <li><strong>Core Concepts:</strong> Encryption (AES, RSA), Firewalls, Intrusion Detection Systems (IDS), Virtual Private Networks (VPNs)</li>
-                <li><strong>Threats:</strong> Malware, Phishing, Ransomware, DDoS Attacks</li>
-                <li><strong>Tools:</strong> Wireshark (network analysis), Metasploit (exploitation), Nmap (port scanning), Snort (IDS)</li>
-                <li><strong>Certifications:</strong> CISSP (expert-level), CEH (ethical hacking), CompTIA Security+ (entry-level), CCSP (cloud security)</li>
-                <li><strong>Best Practices:</strong> Regular updates, strong passwords, multi-factor authentication (MFA), and zero-trust architecture</li>
+                <li><strong>Concepts:</strong> Encryption, Firewalls, IDS/IPS</li>
+                <li><strong>Threats:</strong> Malware, Phishing, DDoS</li>
+                <li><strong>Tools:</strong> Wireshark, Metasploit, Nmap</li>
             </ul>
-            <p>Stay ahead of cybercriminals with GatusSecGG’s proven solutions.</p>
-            <button id="explore-now">Explore Now</button>
+            <div class="progress-bar" data-label="Cybersecurity Expertise" data-progress="92"></div>
+            <button id="explore-now">Learn More</button>
         </div>
     </section>
 
     <section id="software-dev">
         <h2>Software Development</h2>
-        <div class="content-box">
-            <p>Software development is the backbone of modern technology, encompassing the creation of applications, systems, and tools that power our digital lives. From concept to deployment, it’s a blend of creativity and technical precision.</p>
+        <div class="content-box" data-tilt>
+            <h3>Build the Future</h3>
+            <p>Create robust, scalable applications with state-of-the-art technologies.</p>
             <ul>
-                <li><strong>Languages:</strong> Python (versatile), Java (enterprise), C++ (performance), Go (scalability)</li>
-                <li><strong>Frameworks:</strong> Django (Python web), Spring (Java), .NET (Microsoft ecosystem), Flutter (cross-platform mobile)</li>
-                <li><strong>Tools:</strong> Git (version control), Docker (containerization), VS Code (IDE), Jenkins (CI/CD)</li>
-                <li><strong>Methodologies:</strong> Agile, Scrum, DevOps, Waterfall</li>
-                <li><strong>Applications:</strong> Desktop software, mobile apps, cloud services, AI/ML systems</li>
+                <li><strong>Languages:</strong> Python, Java, C++</li>
+                <li><strong>Frameworks:</strong> Django, Spring, Flutter</li>
+                <li><strong>Tools:</strong> Git, Docker, Jenkins</li>
             </ul>
-            <p>Build robust solutions with GatusSecGG’s technology stack.</p>
+            <div class="progress-bar" data-label="Development Proficiency" data-progress="88"></div>
             <button id="start-coding">Start Coding</button>
         </div>
     </section>
 
     <section id="web-dev">
         <h2>Web Development</h2>
-        <div class="content-box">
-            <p>Web development brings ideas to life on the internet, combining design and functionality. Whether it’s a static portfolio or a dynamic e-commerce platform, web dev shapes the online experience.</p>
+        <div class="content-box" data-tilt>
+            <h3>Craft Digital Experiences</h3>
+            <p>Design responsive, secure websites that captivate and perform.</p>
             <ul>
-                <li><strong>Front-End:</strong> HTML (structure), CSS (styling), JavaScript (interactivity), React (UI framework)</li>
-                <li><strong>Back-End:</strong> Node.js (JavaScript runtime), PHP (server-side), Ruby on Rails (rapid development), Python Flask (lightweight)</li>
-                <li><strong>Tools:</strong> Bootstrap (responsive design), WordPress (CMS), Webpack (module bundler), Postman (API testing)</li>
-                <li><strong>Databases:</strong> MySQL, MongoDB, PostgreSQL</li>
-                <li><strong>Trends:</strong> Progressive Web Apps (PWAs), Single Page Applications (SPAs), Serverless architecture</li>
+                <li><strong>Front-End:</strong> HTML, CSS, React</li>
+                <li><strong>Back-End:</strong> Node.js, PHP, Flask</li>
+                <li><strong>Trends:</strong> PWAs, SPAs</li>
             </ul>
-            <p>Create secure websites with GatusSecGG’s expertise.</p>
-            <button id="build-a-site">Build a Site</button>
+            <div class="progress-bar" data-label="Web Dev Skills" data-progress="90"></div>
+            <button id="build-a-site">Build Now</button>
         </div>
     </section>
 
     <section id="pentesting">
-        <h2>Pentesting</h2>
-        <div class="content-box">
-            <p>Penetration testing, or pentesting, is the ethical art of hacking systems to uncover vulnerabilities before malicious actors do. It’s a critical skill in the fight against cybercrime.</p>
+        <h2>Penetration Testing</h2>
+        <div class="content-box" data-tilt>
+            <h3>Secure Through Testing</h3>
+            <p>Identify vulnerabilities with expert ethical hacking services.</p>
             <ul>
-                <li><strong>Techniques:</strong> Social Engineering (phishing), SQL Injection (database exploits), Cross-Site Scripting (XSS), Privilege Escalation</li>
-                <li><strong>Tools:</strong> Burp Suite (web testing), Kali Linux (pentest OS), John the Ripper (password cracking), Aircrack-ng (Wi-Fi security)</li>
-                <li><strong>Phases:</strong> Reconnaissance, Scanning, Exploitation, Post-Exploitation, Reporting</li>
-                <li><strong>Certifications:</strong> OSCP (hands-on pentesting), PNPT (practical focus), eJPT (entry-level), CRTP (Active Directory)</li>
-                <li><strong>Legal Note:</strong> Always obtain explicit permission before testing systems you don’t own.</li>
+                <li><strong>Techniques:</strong> SQL Injection, XSS, CSRF</li>
+                <li><strong>Tools:</strong> Burp Suite, Kali Linux</li>
+                <li><strong>Certifications:</strong> OSCP, CEH</li>
             </ul>
-            <p>Leverage GatusSecGG’s ethical hacking services.</p>
-            <button id="hack-ethically">Hack Ethically</button>
+            <div class="progress-bar" data-label="Pentesting Expertise" data-progress="95"></div>
+            <button id="hack-ethically">Test Now</button>
         </div>
     </section>
 
     <section id="mss">
         <h2>Managed Security Services</h2>
-        <div class="content-box">
-            <h3>One-Stop, Proven Cyber Defense</h3>
-            <p>GatusSecGG is the partner of choice for tens of thousands of distributed enterprises. Our full suite of managed security solutions and expert advisors manage your real-time cybersecurity risks 24x7x365 as an extension of your security team.</p>
-            <p><strong>Your Trusted Cybersecurity Defense Partner:</strong></p>
+        <div class="content-box" data-tilt>
+            <h3>Enterprise-Grade Protection</h3>
+            <p>24/7 cybersecurity solutions tailored for global enterprises.</p>
             <ul>
-                <li>6+ Billion online events continuously monitored, anonymized, & analyzed every day</li>
-                <li>33+ Billion client cybersecurity events stopped every month</li>
-                <li>70 Countries supported with advanced cybersecurity and compliance solutions</li>
-                <li>4+ Million business users</li>
+                <li>Real-time threat monitoring</li>
+                <li>AI-driven defense systems</li>
+                <li>Global compliance support</li>
             </ul>
-            <p><strong>A Global Leader:</strong></p>
-            <ul>
-                <li><strong>Unbeatable Capabilities:</strong> Streamlined cybersecurity & compliance protection in one integrated solution.</li>
-                <li><strong>Leading AI-Powered Platform:</strong> Asgard Platform® - The industry’s largest AI-powered cybersecurity & compliance data repository designed to help make informed, predictive, & cost-effective risk mitigation decisions - faster.</li>
-                <li><strong>Fast & Specialized 24x7x365 Support:</strong> Speed matters in cybersecurity & compliance.</li>
-            </ul>
-            <p><strong>What’s Included?</strong></p>
-            <p>GatusSecGG MSS provides technology and expert advisors to create a consolidated network blueprint standard across all partner locations, including outsourced management of firewalls, built-in redundant internet connectivity with broadband and cellular Internet backups, and comprehensive security through best-in-class firewall, SIEM, FIM, and endpoint protection technologies.</p>
-            <p><strong>Detect | Protect | Recover</strong></p>
-            <ul>
-                <li><strong>Detect:</strong> 24x7x365 asset monitoring, Security Scanning (Internal/External Vulnerability Scanning, Penetration Testing, Rogue Wireless Detection, Network Mapper Scanning), Online Presence Defense (Dark Web Monitoring, Web Malware Scanning), PCI DSS Reporting.</li>
-                <li><strong>Protect:</strong> Uninterrupted Connectivity (broadband & 5G), Secure Standardized Network, Cutting-Edge Security via Asgard Platform.</li>
-                <li><strong>Recover:</strong> Real-Time Network Intelligence, Data Security & Compliance.</li>
-            </ul>
-            <button id="contact-us">Contact Us</button>
+            <button id="contact-us">Get a Quote</button>
+        </div>
+    </section>
+
+    <section id="code-playground">
+        <h2>Code Playground</h2>
+        <div class="content-box code-editor glass-effect" data-tilt>
+            <h3>Live Coding Environment</h3>
+            <p>Write, run, and explore code in real-time with our advanced playground.</p>
+            <div class="editor-wrapper">
+                <div class="tabs">
+                    <button class="tab-btn active" data-lang="html-css-js">HTML/CSS/JS</button>
+                    <button class="tab-btn" data-lang="python">Python</button>
+                </div>
+                <div class="editor-container">
+                    <div class="editor-pane split-pane">
+                        <pre><code id="code-input" class="language-html" contenteditable="true" spellcheck="false"><!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { background: #1e2a38; color: #e0f7fa; font-family: 'Roboto Mono', monospace; }
+        h1 { color: #00bcd4; text-shadow: 0 0 5px #00e676; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to GatusHub!</h1>
+    <script>
+        console.log("Code Playground is live!");
+    </script>
+</body>
+</html></code></pre>
+                        <pre><code id="python-input" class="language-python" contenteditable="true" spellcheck="false" style="display: none;">def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("GatusHub"))
+for i in range(3):
+    print(f"Count: {i}")</code></pre>
+                    </div>
+                    <div class="resizer"></div>
+                    <div class="output-pane split-pane">
+                        <div class="output-header">
+                            <span>Output</span>
+                            <button id="clear-output" data-tooltip="Clear Output">🗑️</button>
+                            <button id="copy-code" data-tooltip="Copy Code">📋</button>
+                        </div>
+                        <div id="code-output" class="code-output"></div>
+                    </div>
+                </div>
+                <div class="editor-controls">
+                    <button id="run-code" data-tooltip="Execute Code">Run Code</button>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="videos">
-        <h2>Videos</h2>
-        <div class="content-box">
-            <p>Watch my latest video from GatusSecGG’s YouTube channel:</p>
-            <iframe src="https://www.youtube.com/embed/ozFAlIJU7ME" title="GatusSecGG Video" frameborder="0" allowfullscreen></iframe>
-            <p>More tutorials and updates available on <a href="https://www.youtube.com/@GatusSecGG" target="_blank">YouTube</a>.</p>
+        <h2>Video Insights</h2>
+        <div class="content-box video-section" data-tilt>
+            <p>Discover our latest tutorials and insights:</p>
+            <div class="video-carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <iframe loading="lazy" src="https://www.youtube.com/embed/ozFAlIJU7ME" title="GatusSecGG Video 1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe loading="lazy" src="https://www.youtube.com/embed/ur-IpBCsH8Y" title="GatusSecGG Video 2" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe loading="lazy" src="https://www.youtube.com/embed/cOMkxIpb63k" title="GatusSecGG Video 3" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe loading="lazy" src="https://www.youtube.com/embed/v8ctbdfBvsU" title="GatusSecGG Video 4" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <button class="carousel-prev">❮</button>
+                <button class="carousel-next">❯</button>
+            </div>
+            <p><a href="https://www.youtube.com/@GatusSecGG" target="_blank">More on YouTube</a></p>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact Us</h2>
-        <div class="content-box">
-            <h3>Get in Touch</h3>
-            <p><strong>Mark JP Tolentino</strong></p>
-            <p><a href="mailto:tolentinomarkjp@gmail.com">tolentinomarkjp@gmail.com</a></p>
+        <div class="content-box" data-tilt>
+            <h3>Let’s Connect</h3>
+            <p><strong>Mark JP Tolentino</strong> | <a href="mailto:tolentinomarkjp@gmail.com">tolentinomarkjp@gmail.com</a></p>
             <form id="contact-form">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
                 <button type="submit" id="send-message">Send Message</button>
             </form>
-            <p><strong>24x7x365 Expert Support:</strong> My global support is always on.</p>
-            <p><strong>Connect with me:</strong></p>
-            <ul>
+            <p><strong>Connect:</strong></p>
+            <ul class="social-links">
                 <li><a href="https://www.youtube.com/@GatusSecGG" target="_blank">YouTube</a></li>
                 <li><a href="https://www.linkedin.com/in/mark-jp-tolentino-043522294/" target="_blank">LinkedIn</a></li>
                 <li><a href="https://github.com/markjptolentino" target="_blank">GitHub</a></li>
                 <li><a href="https://x.com/gatus_jepoy" target="_blank">Twitter</a></li>
+                <li><a href="https://tryhackme.com/p/markjp.tolentino" target="_blank">TryHackMe</a></li>
             </ul>
         </div>
     </section>
 
     <section id="login">
         <h2>Login</h2>
-        <div class="content-box">
-            <p>Log in to access your GatusHub account and explore exclusive features.</p>
+        <div class="content-box" data-tilt>
+            <p>Access your GatusHub account securely.</p>
             <button id="login-btn">Login</button>
         </div>
     </section>
 
     <section id="signup">
         <h2>Signup</h2>
-        <div class="content-box">
-            <p>Sign up to join the GatusHub community and stay updated with the latest in cybersecurity and development.</p>
+        <div class="content-box" data-tilt>
+            <p>Join our growing community of tech enthusiasts.</p>
             <button id="signup-btn">Signup</button>
         </div>
     </section>
 
     <footer>
-        <p>Developed by Mark JP Tolentino</p>
+        <p>Developed by <span>Mark JP Tolentino</span></p>
         <p>
             <a href="#home">Home</a> |
             <a href="https://www.youtube.com/@GatusSecGG" target="_blank">YouTube</a> |
             <a href="https://www.linkedin.com/in/mark-jp-tolentino-043522294/" target="_blank">LinkedIn</a> |
             <a href="https://github.com/markjptolentino" target="_blank">GitHub</a> |
             <a href="https://x.com/gatus_jepoy" target="_blank">Twitter</a> |
+            <a href="https://tryhackme.com/p/markjp.tolentino" target="_blank">TryHackMe</a> |
             <a href="#contact">Contact</a>
         </p>
         <p>Email: <a href="mailto:tolentinomarkjp@gmail.com">tolentinomarkjp@gmail.com</a></p>
     </footer>
+
+    <button id="scroll-top" title="Back to Top">↑</button>
+    <div id="chat-bubble" title="Chat with us!">💬</div>
+
+    <audio id="background-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+    </audio>
 
     <script src="script.js"></script>
 </body>
