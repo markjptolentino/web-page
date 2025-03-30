@@ -57,4 +57,3 @@ This project is open-source and available under the MIT License.
 =======
 
 💡 Happy Coding! 🎉
->>>>>>> 47163e9 (Initial commit of README.md)
