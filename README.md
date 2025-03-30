@@ -53,3 +53,8 @@ If you like this project and want to show some love, feel free to buy me a coffe
 📜 License
 
 This project is open-source and available under the MIT License.
+<<<<<<< HEAD
+=======
+
+💡 Happy Coding! 🎉
+>>>>>>> 47163e9 (Initial commit of README.md)
