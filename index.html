@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GatusHub - Powered by GatusSecGG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="matrix-bg"></canvas>
+
+    <header>
+        <img src="./images/thumb/thumbnail_1.png" alt="GatusSecGG Logo" class="logo">
+        <h1>GatusHub - Powered by GatusSecGG</h1>
+        <p>Unlock the Secrets of Cybersecurity, Software, Web Development, and Pentesting</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#cybersecurity">Cybersecurity</a></li>
+            <li><a href="#software-dev">Software Development</a></li>
+            <li><a href="#web-dev">Web Development</a></li>
+            <li><a href="#pentesting">Pentesting</a></li>
+            <li><a href="#mss">Managed Security Services</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#signup">Signup</a></li>
+        </ul>
+        <span class="search-icon">🔍</span>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to GatusHub</h2>
+        <div class="content-box">
+            <h3>Your Cybersecurity and Development Hub</h3>
+            <p>GatusHub is your ultimate resource for mastering cybersecurity, software development, web development, and penetration testing. Whether you're a beginner or a seasoned professional, we provide tools, insights, and services to secure and innovate in the digital world.</p>
+            <p>Join my community to explore cutting-edge solutions and stay ahead of cyber threats.</p>
+            <button id="get-started">Get Started</button>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="content-box gallery">
+            <p>Check out some visuals from the world of cybersecurity and development:</p>
+            <img src="./images/thumb/thumbnail_2.png" alt="Cybersecurity">
+            <img src="./images/thumb/thumbnail_3.png" alt="Code">
+            <img src="./images/thumb/thumbnail_4.png" alt="Web Design">
+        </div>
+    </section>
+
+    <section id="cybersecurity">
+        <h2>Cybersecurity</h2>
+        <div class="content-box">
+            <p>Cybersecurity is the art of defending systems, networks, and data against malicious threats. In a world of evolving cyberattacks, understanding security principles is crucial for protecting sensitive information and infrastructure.</p>
+            <ul>
+                <li><strong>Core Concepts:</strong> Encryption (AES, RSA), Firewalls, Intrusion Detection Systems (IDS), Virtual Private Networks (VPNs)</li>
+                <li><strong>Threats:</strong> Malware, Phishing, Ransomware, DDoS Attacks</li>
+                <li><strong>Tools:</strong> Wireshark (network analysis), Metasploit (exploitation), Nmap (port scanning), Snort (IDS)</li>
+                <li><strong>Certifications:</strong> CISSP (expert-level), CEH (ethical hacking), CompTIA Security+ (entry-level), CCSP (cloud security)</li>
+                <li><strong>Best Practices:</strong> Regular updates, strong passwords, multi-factor authentication (MFA), and zero-trust architecture</li>
+            </ul>
+            <p>Stay ahead of cybercriminals with GatusSecGG’s proven solutions.</p>
+            <button id="explore-now">Explore Now</button>
+        </div>
+    </section>
+
+    <section id="software-dev">
+        <h2>Software Development</h2>
+        <div class="content-box">
+            <p>Software development is the backbone of modern technology, encompassing the creation of applications, systems, and tools that power our digital lives. From concept to deployment, it’s a blend of creativity and technical precision.</p>
+            <ul>
+                <li><strong>Languages:</strong> Python (versatile), Java (enterprise), C++ (performance), Go (scalability)</li>
+                <li><strong>Frameworks:</strong> Django (Python web), Spring (Java), .NET (Microsoft ecosystem), Flutter (cross-platform mobile)</li>
+                <li><strong>Tools:</strong> Git (version control), Docker (containerization), VS Code (IDE), Jenkins (CI/CD)</li>
+                <li><strong>Methodologies:</strong> Agile, Scrum, DevOps, Waterfall</li>
+                <li><strong>Applications:</strong> Desktop software, mobile apps, cloud services, AI/ML systems</li>
+            </ul>
+            <p>Build robust solutions with GatusSecGG’s technology stack.</p>
+            <button id="start-coding">Start Coding</button>
+        </div>
+    </section>
+
+    <section id="web-dev">
+        <h2>Web Development</h2>
+        <div class="content-box">
+            <p>Web development brings ideas to life on the internet, combining design and functionality. Whether it’s a static portfolio or a dynamic e-commerce platform, web dev shapes the online experience.</p>
+            <ul>
+                <li><strong>Front-End:</strong> HTML (structure), CSS (styling), JavaScript (interactivity), React (UI framework)</li>
+                <li><strong>Back-End:</strong> Node.js (JavaScript runtime), PHP (server-side), Ruby on Rails (rapid development), Python Flask (lightweight)</li>
+                <li><strong>Tools:</strong> Bootstrap (responsive design), WordPress (CMS), Webpack (module bundler), Postman (API testing)</li>
+                <li><strong>Databases:</strong> MySQL, MongoDB, PostgreSQL</li>
+                <li><strong>Trends:</strong> Progressive Web Apps (PWAs), Single Page Applications (SPAs), Serverless architecture</li>
+            </ul>
+            <p>Create secure websites with GatusSecGG’s expertise.</p>
+            <button id="build-a-site">Build a Site</button>
+        </div>
+    </section>
+
+    <section id="pentesting">
+        <h2>Pentesting</h2>
+        <div class="content-box">
+            <p>Penetration testing, or pentesting, is the ethical art of hacking systems to uncover vulnerabilities before malicious actors do. It’s a critical skill in the fight against cybercrime.</p>
+            <ul>
+                <li><strong>Techniques:</strong> Social Engineering (phishing), SQL Injection (database exploits), Cross-Site Scripting (XSS), Privilege Escalation</li>
+                <li><strong>Tools:</strong> Burp Suite (web testing), Kali Linux (pentest OS), John the Ripper (password cracking), Aircrack-ng (Wi-Fi security)</li>
+                <li><strong>Phases:</strong> Reconnaissance, Scanning, Exploitation, Post-Exploitation, Reporting</li>
+                <li><strong>Certifications:</strong> OSCP (hands-on pentesting), PNPT (practical focus), eJPT (entry-level), CRTP (Active Directory)</li>
+                <li><strong>Legal Note:</strong> Always obtain explicit permission before testing systems you don’t own.</li>
+            </ul>
+            <p>Leverage GatusSecGG’s ethical hacking services.</p>
+            <button id="hack-ethically">Hack Ethically</button>
+        </div>
+    </section>
+
+    <section id="mss">
+        <h2>Managed Security Services</h2>
+        <div class="content-box">
+            <h3>One-Stop, Proven Cyber Defense</h3>
+            <p>GatusSecGG is the partner of choice for tens of thousands of distributed enterprises. Our full suite of managed security solutions and expert advisors manage your real-time cybersecurity risks 24x7x365 as an extension of your security team.</p>
+            <p><strong>Your Trusted Cybersecurity Defense Partner:</strong></p>
+            <ul>
+                <li>6+ Billion online events continuously monitored, anonymized, & analyzed every day</li>
+                <li>33+ Billion client cybersecurity events stopped every month</li>
+                <li>70 Countries supported with advanced cybersecurity and compliance solutions</li>
+                <li>4+ Million business users</li>
+            </ul>
+            <p><strong>A Global Leader:</strong></p>
+            <ul>
+                <li><strong>Unbeatable Capabilities:</strong> Streamlined cybersecurity & compliance protection in one integrated solution.</li>
+                <li><strong>Leading AI-Powered Platform:</strong> Asgard Platform® - The industry’s largest AI-powered cybersecurity & compliance data repository designed to help make informed, predictive, & cost-effective risk mitigation decisions - faster.</li>
+                <li><strong>Fast & Specialized 24x7x365 Support:</strong> Speed matters in cybersecurity & compliance.</li>
+            </ul>
+            <p><strong>What’s Included?</strong></p>
+            <p>GatusSecGG MSS provides technology and expert advisors to create a consolidated network blueprint standard across all partner locations, including outsourced management of firewalls, built-in redundant internet connectivity with broadband and cellular Internet backups, and comprehensive security through best-in-class firewall, SIEM, FIM, and endpoint protection technologies.</p>
+            <p><strong>Detect | Protect | Recover</strong></p>
+            <ul>
+                <li><strong>Detect:</strong> 24x7x365 asset monitoring, Security Scanning (Internal/External Vulnerability Scanning, Penetration Testing, Rogue Wireless Detection, Network Mapper Scanning), Online Presence Defense (Dark Web Monitoring, Web Malware Scanning), PCI DSS Reporting.</li>
+                <li><strong>Protect:</strong> Uninterrupted Connectivity (broadband & 5G), Secure Standardized Network, Cutting-Edge Security via Asgard Platform.</li>
+                <li><strong>Recover:</strong> Real-Time Network Intelligence, Data Security & Compliance.</li>
+            </ul>
+            <button id="contact-us">Contact Us</button>
+        </div>
+    </section>
+
+    <section id="videos">
+        <h2>Videos</h2>
+        <div class="content-box">
+            <p>Watch my latest video from GatusSecGG’s YouTube channel:</p>
+            <iframe src="https://www.youtube.com/embed/ozFAlIJU7ME" title="GatusSecGG Video" frameborder="0" allowfullscreen></iframe>
+            <p>More tutorials and updates available on <a href="https://www.youtube.com/@GatusSecGG" target="_blank">YouTube</a>.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="content-box">
+            <h3>Get in Touch</h3>
+            <p><strong>Mark JP Tolentino</strong></p>
+            <p><a href="mailto:tolentinomarkjp@gmail.com">tolentinomarkjp@gmail.com</a></p>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" id="send-message">Send Message</button>
+            </form>
+            <p><strong>24x7x365 Expert Support:</strong> My global support is always on.</p>
+            <p><strong>Connect with me:</strong></p>
+            <ul>
+                <li><a href="https://www.youtube.com/@GatusSecGG" target="_blank">YouTube</a></li>
+                <li><a href="https://www.linkedin.com/in/mark-jp-tolentino-043522294/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/markjptolentino" target="_blank">GitHub</a></li>
+                <li><a href="https://x.com/gatus_jepoy" target="_blank">Twitter</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="login">
+        <h2>Login</h2>
+        <div class="content-box">
+            <p>Log in to access your GatusHub account and explore exclusive features.</p>
+            <button id="login-btn">Login</button>
+        </div>
+    </section>
+
+    <section id="signup">
+        <h2>Signup</h2>
+        <div class="content-box">
+            <p>Sign up to join the GatusHub community and stay updated with the latest in cybersecurity and development.</p>
+            <button id="signup-btn">Signup</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>Developed by Mark JP Tolentino</p>
+        <p>
+            <a href="#home">Home</a> |
+            <a href="https://www.youtube.com/@GatusSecGG" target="_blank">YouTube</a> |
+            <a href="https://www.linkedin.com/in/mark-jp-tolentino-043522294/" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/markjptolentino" target="_blank">GitHub</a> |
+            <a href="https://x.com/gatus_jepoy" target="_blank">Twitter</a> |
+            <a href="#contact">Contact</a>
+        </p>
+        <p>Email: <a href="mailto:tolentinomarkjp@gmail.com">tolentinomarkjp@gmail.com</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
